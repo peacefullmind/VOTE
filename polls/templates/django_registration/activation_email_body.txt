@@ -1,0 +1,2 @@
+点击下边的这个链接验证你的邮箱。
+<a href="{{ scheme }}://{{ site.domain }}{% url 'django_registration_activate' activation_key %}">验证</a>

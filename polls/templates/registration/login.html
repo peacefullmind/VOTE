@@ -1,0 +1,11 @@
+{% extends 'base_site.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">登陆</button>
+    <input type="hidden" name="next" value="/">
+  </form>
+{% endblock %}

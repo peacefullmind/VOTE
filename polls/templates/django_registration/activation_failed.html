@@ -1,0 +1,7 @@
+{% extends 'base_site.html' %}
+
+{% block content %}
+  <p>验证失败:(</p>
+  <p>{{ activation_error.message }}</p>
+  <a href="{% url 'django_registration_register' %}">再次注册</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base_site.html' %}
+
+{% block content %}
+  <p>
+    {{ object }}
+  </p>
+  <ul>
+    {% for choice in object.choice_set.all %}
+      <li>{{ choice }}  ({{ choice.votes }})</li>
+    {% endfor %}
+  </ul>
+
+  <p>
+    <a href="{% url 'polls:index' %}">返回到列表页</a>
+  </p>
+{% endblock %}

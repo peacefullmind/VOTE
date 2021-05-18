@@ -1,0 +1,21 @@
+{% extends 'base_site.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <p>
+    发起投票活动
+  </p>
+
+  <form action="{% url 'polls:new_question_form'%}" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+{#      {{ form.as_p }}#}
+{#      {{ form }}#}
+    <button type="submit" class="btn btn-primary">提交</button>
+  </form>
+
+{#  <hr>#}
+{#  <p>#}
+{#    <a href="{% url 'polls:results' object.id %}">看结果</a>#}
+{#  </p>#}
+{% endblock %}
