@@ -43,28 +43,13 @@ class QuestionForm(forms.ModelForm):
 class QuestionFormPure(forms.ModelForm):
     question_text = fields.CharField()
     pub_date = fields.DateTimeField()
-    class meta:
+    class Meta:
         model=models.Question
         fields=['question_text','pub_date']
 
-# class ChoiceInline(forms.ModelForm):
-#     model = models.Choice
-#     extra = 0
-#     show_change_link = True
-#
-# class QuestionUser(forms.ModelForm):
-#     fieldsets = [
-#         (None,               {'fields': ['question_text']}),
-#         ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
-#     ]
-#     inlines = [ChoiceInline]
-#     list_display = ('question_text', 'pub_date', 'was_published_recently')
-#     list_filter = ['pub_date']
-#     search_fields = ['question_text']
-#
-#     def was_published_recently(self, obj):
-#         now = timezone.now()
-#         return now - datetime.timedelta(days=1) <= obj.pub_date <= now
-#     was_published_recently.admin_order_field = 'pub_date'
-#     was_published_recently.boolean = True
-#     was_published_recently.short_description = 'Published recently?'
+class ChoiceForm(forms.ModelForm):
+    # question_text = fields.CharField()
+    # pub_date = fields.DateTimeField()
+    class Meta:
+        model=models.Choice
+        fields=['question','choice_text']

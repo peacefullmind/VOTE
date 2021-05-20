@@ -12,8 +12,14 @@ urlpatterns = [
 
     # path('new_question/', views.new_question, name='new_question'),
     #NewQuesFormView
-    path('new_question/', views.NewQuesView.as_view(), name='new_question'),
-    path('new_question/add', views.NewQuesFormView.as_view(), name='new_question_form'),
+    # path('new_question/', views.NewQuesFormView.as_view(), name='new_question'),
+    path('new_question/', views.NewQuesFormView.as_view(), name='new_question_form'),
+    # path('new_question/', views.QuesCreateView.as_view(), name='new_question_form'),
+    path('new_choice/', views.NewChoiceFormView.as_view(), name='new_choice_form'),
+
+
+    path('edit_question/<int:pk>/', views.QuesUpdateView.as_view(), name='edit_question_form'),
+
 
 
 ]

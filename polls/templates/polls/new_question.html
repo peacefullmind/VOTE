@@ -1,9 +1,10 @@
 {% extends 'base_site.html' %}
 {% load crispy_forms_tags %}
 
+
 {% block content %}
   <p>
-    发起投票活动
+    增加投票问题
   </p>
 
   <form action="{% url 'polls:new_question_form'%}" method="post">

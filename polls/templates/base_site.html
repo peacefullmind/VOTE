@@ -14,10 +14,10 @@
               <div class="dropdown-menu" aria-labelledby="themes">
                 <a class="dropdown-item" href="{% url 'polls:index' %}">首页</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'polls:new_question' %}">发起投票</a>
-                <a class="dropdown-item" href="../cosmo/">Cosmo</a>
-                <a class="dropdown-item" href="../cyborg/">Cyborg</a>
-                <a class="dropdown-item" href="../darkly/">Darkly</a>
+                <a class="dropdown-item" href="{% url 'polls:new_question_form' %}">添加投票问题</a>
+                <a class="dropdown-item" href="{% url 'polls:new_choice_form' %}">添加投票选项</a>
+{#                <a class="dropdown-item" href="{% url 'polls:index' %}">修改投票问题</a>#}
+{#                <a class="dropdown-item" href="{% url 'polls:index' %}">查看所有投票结果</a>#}
               </div>
             </li>
           {% comment %}
