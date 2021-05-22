@@ -12,10 +12,11 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">菜单 <span class="caret"></span></a>
               <div class="dropdown-menu" aria-labelledby="themes">
-                <a class="dropdown-item" href="{% url 'polls:index' %}">首页</a>
+                <a class="dropdown-item" href="{% url 'polls:index' %}">去投票</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'polls:new_question_form' %}">添加投票问题</a>
-                <a class="dropdown-item" href="{% url 'polls:new_choice_form' %}">添加投票选项</a>
+                  <a class="dropdown-item" href="{% url 'polls:manage' %}">管理投票活动</a>
+{#                <a class="dropdown-item" href="{% url 'polls:new_question_form' %}">添加投票问题</a>#}
+{#                <a class="dropdown-item" href="{% url 'polls:new_choice_form' %}">添加投票选项</a>#}
 {#                <a class="dropdown-item" href="{% url 'polls:index' %}">修改投票问题</a>#}
 {#                <a class="dropdown-item" href="{% url 'polls:index' %}">查看所有投票结果</a>#}
               </div>
