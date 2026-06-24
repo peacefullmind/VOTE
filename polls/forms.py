@@ -41,15 +41,18 @@ class QuestionForm(forms.ModelForm):
         return self.cleaned_data
 
 class QuestionFormPure(forms.ModelForm):
-    question_text = fields.CharField()
-    pub_date = fields.DateTimeField()
     class Meta:
         model=models.Question
-        fields=['question_text','pub_date']
+        fields='__all__'
+
+class QuestionForm2(forms.ModelForm):
+
+    class Meta:
+        model=models.Question
+        fields='__all__'
+
 
 class ChoiceForm(forms.ModelForm):
-    # question_text = fields.CharField()
-    # pub_date = fields.DateTimeField()
     class Meta:
         model=models.Choice
         fields=['question','choice_text']

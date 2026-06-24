@@ -16,10 +16,13 @@
   <p>
     <a href="{% url 'polls:results' object.id %}">看结果</a>
   </p>
-    <p>
-    <a href="{% url 'polls:edit_question_form' object.id %}">修改投票问题描述</a>
-  </p>
-        <p>
-    <a href="{% url 'polls:results' object.id %}">看结果</a>
-  </p>
+{#    <p>#}
+{#    <a href="{% url 'polls:edit_question_form' object.id %}">修改投票问题描述</a>#}
+{#  </p>#}
+{#        <p>#}
+{#    <a href="{% url 'polls:new_choice_form' %}">增加问题选项描述</a>#}
+{#  </p>#}
+{#    <p>#}
+{#    <a href="{% url 'polls:new_choice_form' %}">修改问题选项描述</a>#}
+{#  </p>#}
 {% endblock %}
